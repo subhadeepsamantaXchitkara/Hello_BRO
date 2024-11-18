@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link rel="stylesheet" href="bro.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Happy Birthday!</h1>
+        </div>
+        <div class="image-container">
+            <img src="WhatsApp Image 2024-11-18 at 20.54.37_50492f09.jpg" alt="Birthday Celebration" border="0">
+        </div>
+        
+        <div class="additional-images">
+            <img id="me1" src="c5c3a578-3116-4946-8196-01f098ab4ee7.jpg" alt="Image 1" class="additional-image">
+            <img id="me2" src="Scott Mccall and Stiles Stilinki _You're my brother_.jpeg" alt="Image 2" class="additional-image">
+        </div>
+        
+        <!-- Audio element without controls -->
+        <audio id="birthday-song" src="Yeh_Dosti_Hum_Nahi_Todenge__Lyrics_by-_Arijit_Singh__heart❤_touching_songs(128k).mp3"></audio>
+
+        <div class="content">
+            <button id="play-button" class="play-button">Click Me!</button>
+            <p>
+                <b>"Happy Birthday, Sudipta! 🎉🎂 May your day be filled with as much laughter and joy as your jokes bring to the world! Keep spreading your awesome humor, because the world definitely needs more of it. Wishing you an amazing year ahead with lots of funny moments and endless smiles. Enjoy your day, you legend! 🎈😄"
+                    Cheers to more adventures together! 🥂✨</b>
+                <br><br>
+                <b>With love and best wishes,<br>
+                Subhadeep😊</b>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>The</p>
+            <p>...BakBencher-1👨🏻‍💻...</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('play-button').addEventListener('click', function() {
+            const button = this;
+            const song = document.getElementById('birthday-song');
+
+            // Change button text immediately
+            button.textContent = "Wait a few seconds !";
+
+            // Play or pause the song
+            if (song.paused) {
+                song.play().then(() => {
+                    console.log("Audio is playing.");
+                }).catch(error => {
+                    console.error("Error playing audio:", error);
+                });
+            } else {
+                song.pause();
+                console.log("Audio paused.");
+            }
+
+            // Change back to "Click Me!" after 5 seconds
+           // 5000 milliseconds = 5 seconds
+        });
+    </script>
+</body>
+</html>
+
